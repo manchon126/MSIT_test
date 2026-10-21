@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과학기술정보통신부 (MSIT) - 국민과 함께하는 디지털·과학기술 세상</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome Icons (CDN) - 오프라인에서도 심볼 및 텍스트 fallback 지원 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- 상단 네비게이션 헤더 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="logo-mark">
+          <i class="fa-solid fa-atom"></i>
+        </div>
+        <div class="brand-text">
+          <span class="kr-title">과학기술정보통신부</span>
+          <span class="en-title">Ministry of Science and ICT</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about" class="nav-item active"><i class="fa-solid fa-landmark"></i> 기관소개</a>
+        <a href="#benefits" class="nav-item"><i class="fa-solid fa-clipboard-check"></i> 맞춤 혜택 찾기</a>
+        <a href="#mission" class="nav-item"><i class="fa-solid fa-list-check"></i> 주요업무</a>
+        <a href="#trends" class="nav-item"><i class="fa-solid fa-rocket"></i> 핵심동향</a>
+        <a href="#news" class="nav-item"><i class="fa-regular fa-newspaper"></i> 최신뉴스</a>
+        <a href="#quiz" class="nav-item"><i class="fa-solid fa-lightbulb"></i> 퀴즈·상식</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon" title="다크/라이트 모드 전환" aria-label="테마 전환">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="https://www.msit.go.kr" target="_blank" rel="noopener noreferrer" class="btn-primary-sm">
+          공식 누리집 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 히어로 섹션 -->
+  <section class="hero-section" id="about">
+    <div class="hero-bg-glow glow-1"></div>
+    <div class="hero-bg-glow glow-2"></div>
+    <div class="container hero-content">
+      <div class="badge-tag"><i class="fa-solid fa-sparkles"></i> AI로 디지털 대전환, 과학기술로 미래선도</div>
+      <h1 class="hero-title">
+        대한민국의 내일을 여는 혁신의 심장,<br>
+        <span class="text-gradient">과학기술정보통신부</span>
+      </h1>
+      <p class="hero-desc">
+        과학기술정보통신부는 기초과학 연구부터 최첨단 인공지능(AI), 양자, 우주·항공, 
+        디지털 통신 인프라와 사이버 안전까지 국가 미래 경쟁력과 국민의 편리하고 안전한 디지털 삶을 책임집니다.
+      </p>
+
+      <!-- 핵심 지표 카드 -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">AI 3대 강국</span>
+            <span class="stat-label">국가 AI 거버넌스 및 인프라 확충</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-dna"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">3대 게임체인저</span>
+            <span class="stat-label">AI·첨단바이오·양자 집중 육성</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">디지털 포용</span>
+            <span class="stat-label">통신비 부담 완화 & 사이버 안전망</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 36px;">
+        <a href="#benefits" class="hero-cta-btn">
+          <i class="fa-solid fa-hand-holding-heart"></i> 나는 과기정통부로부터 어떤 도움을 받을 수 있을까? (체크해보기)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 대국민 맞춤 혜택 진단 체크리스트 & 설문 섹션 -->
+  <section class="section bg-soft" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Citizen Benefits Checker</span>
+        <h2 class="section-title">나는 과기정통부로부터 어떤 도움을 받을 수 있을까?</h2>
+        <p class="section-desc">
+          자신에게 해당하는 신분과 관심사를 선택해 보세요. 과기정통부가 국민 여러분을 위해 마련한 실질적인 지원 혜택과 정부 서비스를 맞춤형으로 찾아드립니다!
+        </p>
+      </div>
+
+      <div class="benefit-checker-container">
+        <!-- 체크리스트 입력 카드 -->
+        <div class="checker-card">
+          <!-- 1단계: 나의 신분 / 상황 -->
+          <div class="survey-group">
+            <label class="survey-label">
+              <span class="step-num">1</span> 현재 본인의 상황이나 신분을 선택해 주세요 (1개 선택)
+            </label>
+            <div class="role-grid" id="roleSelector">
+              <button type="button" class="role-card active" data-role="all">
+                <i class="fa-solid fa-users"></i>
+                <div class="role-title">일반 국민 / 직장인</div>
+                <div class="role-desc">통신비 절감, 스팸 차단, AI 일상 활용</div>
+              </button>
+              <button type="button" class="role-card" data-role="youth">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="role-title">청년 · 대학(원)생 · 연구자</div>
+                <div class="role-desc">대통령 장학금, 스타이펜드, SW교육</div>
+              </button>
+              <button type="button" class="role-card" data-role="senior">
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <div class="role-title">어르신 · 디지털 취약계층</div>
+                <div class="role-desc">무료 스마트폰 교육, 취약계층 통신할인</div>
+              </button>
+              <button type="button" class="role-card" data-role="business">
+                <i class="fa-solid fa-building"></i>
+                <div class="role-title">중소기업 · 소상공인 · 스타트업</div>
+                <div class="role-desc">AI 바우처, 보안 취약점 점검, 클라우드 지원</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2단계: 관심 있는 지원 분야 (다중 체크) -->
+          <div class="survey-group">
+            <label class="survey-label">
+              <span class="step-num">2</span> 관심 있거나 고민 중인 분야를 모두 체크해 주세요 (다중 선택 가능)
+            </label>
+            <div class="interest-grid" id="interestSelector">
+              <label class="interest-checkbox">
+                <input type="checkbox" value="telecom" checked>
+                <span class="chk-box"><i class="fa-solid fa-check"></i></span>
+                <span class="chk-text">
+                  <strong>통신비 절감 & 무료 와이파이</strong>
+                  <small>25% 요금할인 대상 확인, 알뜰폰, 공공와이파이</small>
+                </span>
+              </label>
+
+              <label class="interest-checkbox">
+                <input type="checkbox" value="security" checked>
+                <span class="chk-box"><i class="fa-solid fa-check"></i></span>
+                <span class="chk-text">
+                  <strong>스마트폰 보안 & 보이스피싱 예방</strong>
+                  <small>스미싱 탐지, 명의도용 방지 엠세이퍼, 악성앱 차단</small>
+                </span>
+              </label>
+
+              <label class="interest-checkbox">
+                <input type="checkbox" value="education" checked>
+                <span class="chk-box"><i class="fa-solid fa-check"></i></span>
+                <span class="chk-text">
+                  <strong>AI & 디지털 활용 교육</strong>
+                  <small>동네 디지털배움터, 생성형 AI 챗봇 실습, SW 인재양성</small>
+                </span>
+              </label>
+
+              <label class="interest-checkbox">
+                <input type="checkbox" value="research">
+                <span class="chk-box"><i class="fa-solid fa-check"></i></span>
+                <span class="chk-text">
+                  <strong>연구비 · 장학금 · 창업 지원</strong>
+                  <small>이공계 석박사 장학금, 연구생활비, AI 바우처</small>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="checker-action">
+            <button id="calculateBenefitBtn" class="btn-check-submit">
+              <i class="fa-solid fa-magnifying-glass"></i> 맞춤 혜택 & 지원 서비스 확인하기
+            </button>
+          </div>
+        </div>
+
+        <!-- 설문 결과 진단 영역 -->
+        <div class="result-area" id="resultArea">
+          <div class="result-header">
+            <div class="result-summary">
+              <span class="result-tag" id="resultRoleBadge">일반 국민 맞춤 안내</span>
+              <h3 class="result-title">국민님을 위해 과기정통부가 준비한 <span class="highlight-count" id="matchCount">0</span>가지 맞춤 혜택입니다!</h3>
+            </div>
+            <button id="printBenefitBtn" class="btn-print" title="화면 인쇄">
+              <i class="fa-solid fa-print"></i> 결과 인쇄 / 저장
+            </button>
+          </div>
+
+          <div class="result-cards" id="resultCardsContainer">
+            <!-- 자바스크립트로 일치하는 혜택 카드 동적 주입 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 주요 역할 및 업무 (국민 눈높이 설명) -->
+  <section class="section" id="mission">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">What We Do</span>
+        <h2 class="section-title">국민의 일상과 미래를 바꾸는 4대 핵심 업무</h2>
+        <p class="section-desc">과기정통부가 하는 일을 알기 쉬운 언어로 풀어 소개합니다.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="feature-card">
+          <div class="card-icon blue"><i class="fa-solid fa-brain"></i></div>
+          <h3 class="card-title">인공지능 & 디지털 혁신</h3>
+          <p class="card-text">
+            세계 최고 수준의 독자 AI 모델을 개발하고, 국가인공지능위원회를 통해 일상과 산업(제조·의료·금융) 전반에 AI를 안전하고 유익하게 확산합니다.
+          </p>
+          <ul class="card-tags">
+            <li>#생성형AI</li>
+            <li>#AI안전연구소</li>
+            <li>#디지털뉴딜</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="card-icon purple"><i class="fa-solid fa-flask-vial"></i></div>
+          <h3 class="card-title">국가 R&D 및 미래기술 선점</h3>
+          <p class="card-text">
+            차세대 반도체, 첨단 바이오헬스, 양자컴퓨터 등 세상을 바꿀 '게임체인저' 핵심 기술을 연구개발(R&D)하며 미래 먹거리를 만들어냅니다.
+          </p>
+          <ul class="card-tags">
+            <li>#양자컴퓨팅</li>
+            <li>#첨단바이오</li>
+            <li>#K-문샷</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="card-icon cyan"><i class="fa-solid fa-wifi"></i></div>
+          <h3 class="card-title">초연결 통신 & 주파수 정책</h3>
+          <p class="card-text">
+            5G/6G 차세대 이동통신, 전국 공공와이파이 확대, 5G 요금제 세분화 유도 등 국민의 가계 통신비 부담을 덜고 끊김 없는 인터넷 환경을 구축합니다.
+          </p>
+          <ul class="card-tags">
+            <li>#6G선도</li>
+            <li>#통신비절감</li>
+            <li>#주파수분배</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <div class="card-icon green"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="card-title">사이버 보안 & 디지털 권리 보호</h3>
+          <p class="card-text">
+            해킹, 랜섬웨어, 보이스피싱 등 디지털 위협으로부터 국민의 안전을 지키고, 디지털 취약계층의 정보격차 해소와 윤리적 AI 사용 기준을 세웁니다.
+          </p>
+          <ul class="card-tags">
+            <li>#사이버보안</li>
+            <li>#디지털포용</li>
+            <li>#AI윤리규범</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 대화형 동향 탐색 (인터랙티브 탭) -->
+  <section class="section bg-soft" id="trends">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Future Trends</span>
+        <h2 class="section-title">과기정통부가 주도하는 3대 국가 혁신 동향</h2>
+        <p class="section-desc">카테고리를 클릭하여 핵심 전략과 국민이 체감할 수 있는 혜택을 확인하세요.</p>
+      </div>
+
+      <div class="tabs-container">
+        <div class="tab-buttons" role="tablist">
+          <button class="tab-btn active" data-target="tab-ai" role="tab">
+            <i class="fa-solid fa-robot"></i> 1. AI 3대 강국 도약
+          </button>
+          <button class="tab-btn" data-target="tab-quantum" role="tab">
+            <i class="fa-solid fa-atom"></i> 2. 양자 & 첨단바이오
+          </button>
+          <button class="tab-btn" data-target="tab-space" role="tab">
+            <i class="fa-solid fa-shuttle-space"></i> 3. 초연결망 & 사이버안전
+          </button>
+        </div>
+
+        <div class="tab-contents">
+          <!-- 탭 1 -->
+          <div class="tab-panel active" id="tab-ai">
+            <div class="panel-layout">
+              <div class="panel-info">
+                <span class="panel-badge">인공지능 정책</span>
+                <h3>국가인공지능위원회 출범 및 글로벌 AI 규범 주도</h3>
+                <p>
+                  2024년 5월 성황리에 개최된 <strong>'AI 서울정상회의'</strong>와 <strong>'서울선언'</strong>을 바탕으로, 
+                  대한민국은 안전하고 신뢰할 수 있는 글로벌 AI 규범을 선도하고 있습니다. 
+                  대통령 직속 국가인공지능위원회와 AI안전연구소를 중심으로 국내 AI 스타트업 육성 및 산업별 융합을 강력히 추진합니다.
+                </p>
+                <div class="benefit-box">
+                  <div class="benefit-title"><i class="fa-solid fa-check-circle"></i> 국민 체감 포인트</div>
+                  <p>의료 진단 보조, 행정 서비스 간소화, 교육 맞춤형 튜터 등 생활 밀착형 AI 서비스가 안전하게 보급됩니다.</p>
+                </div>
+              </div>
+              <div class="panel-visual">
+                <div class="metric-box">
+                  <span class="m-val">G3</span>
+                  <span class="m-label">글로벌 AI 3대 강국 목표</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-val">AI 기본법</span>
+                  <span class="m-label">진흥과 안전의 균형 제도화</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-val">K-Cloud</span>
+                  <span class="m-label">국산 AI 반도체 실증 확대</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 탭 2 -->
+          <div class="tab-panel" id="tab-quantum">
+            <div class="panel-layout">
+              <div class="panel-info">
+                <span class="panel-badge">미래 게임체인저</span>
+                <h3>양자컴퓨팅 국가전략 및 첨단 바이오 혁신</h3>
+                <p>
+                  현존 슈퍼컴퓨터를 압도하는 <strong>양자컴퓨터</strong> 핵심 부품의 국산화와 50큐비트급 양자컴퓨터 조기 구축을 추진하고 있습니다.
+                  또한 빅데이터·AI를 결합한 첨단 합성생물학과 디지털 바이오 신약 플랫폼 개발을 집중 지원합니다.
+                </p>
+                <div class="benefit-box">
+                  <div class="benefit-title"><i class="fa-solid fa-check-circle"></i> 국민 체감 포인트</div>
+                  <p>난치병 치료 신약 개발 기간이 획기적으로 단축되며, 해킹이 원천 불가능한 양자암호통신으로 개인정보를 철통 보호합니다.</p>
+                </div>
+              </div>
+              <div class="panel-visual">
+                <div class="metric-box">
+                  <span class="m-val">1000 큐비트</span>
+                  <span class="m-label">양자컴퓨터 중장기 로드맵</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-val">바이오 빅데이터</span>
+                  <span class="m-label">100만 명 규모 통합 데이터뱅크</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-val">문샷 R&D</span>
+                  <span class="m-label">도전적 국가 난제 해결 프로젝트</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 탭 3 -->
+          <div class="tab-panel" id="tab-space">
+            <div class="panel-layout">
+              <div class="panel-info">
+                <span class="panel-badge">인프라 & 국민안전</span>
+                <h3>차세대 6G 선도와 일상을 지키는 디지털 안전망</h3>
+                <p>
+                  지상뿐만 아니라 도심항공교통(UAM), 저궤도 위성까지 연결하는 <strong>차세대 6G 통신 표준화</strong>를 선도하고 있습니다. 
+                  동시에 지능화되는 피싱·스미싱, 통신장애, 대규모 해킹에 대응하여 365일 24시간 철통 대응체계를 갖추고 있습니다.
+                </p>
+                <div class="benefit-box">
+                  <div class="benefit-title"><i class="fa-solid fa-check-circle"></i> 국민 체감 포인트</div>
+                  <p>재난 발생 시에도 끊김 없는 비상 통신망 제공 및 스미싱 의심 문자 실시간 자동 차단 기술이 적용됩니다.</p>
+                </div>
+              </div>
+              <div class="panel-visual">
+                <div class="metric-box">
+                  <span class="m-val">6G 표준선점</span>
+                  <span class="m-label">글로벌 통신 협력 및 연구개발</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-val">스마트 방패</span>
+                  <span class="m-label">AI 기반 보이스피싱 탐지·차단</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-val">디지털 배움터</span>
+                  <span class="m-label">어르신·취약계층 스마트기기 교육</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 실시간 최신 뉴스 및 정책 보도 섹션 -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Latest News</span>
+        <h2 class="section-title">과기정통부 주요 소식 & 언론 보도</h2>
+        <p class="section-desc">공식 보도자료 및 주요 언론사 기사 바로가기를 제공합니다.</p>
+      </div>
+
+      <!-- 뉴스 필터 버튼 -->
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">전체보기</button>
+        <button class="filter-btn" data-filter="ai">AI·디지털</button>
+        <button class="filter-btn" data-filter="rnd">R&D·과학기술</button>
+        <button class="filter-btn" data-filter="public">민생·통신정책</button>
+      </div>
+
+      <div class="news-grid" id="newsGrid">
+        <!-- 뉴스 카드 1 -->
+        <article class="news-card" data-category="ai">
+          <div class="news-top">
+            <span class="news-badge ai">AI·디지털</span>
+            <span class="news-date">2024.09</span>
+          </div>
+          <h3 class="news-title">
+            <a href="https://www.boannews.com/media/view.asp?idx=133033" target="_blank" rel="noopener noreferrer">
+              국가인공지능위원회 공식 출범… ‘AI 3대 강국’ 도약 총력전
+            </a>
+          </h3>
+          <p class="news-summary">
+            대통령 직속 민관 합동 국가인공지능위원회가 출범하여 국가 전반의 AI 전환과 미래 컴퓨팅 인프라 투자 로드맵을 확정했습니다.
+          </p>
+          <div class="news-meta">
+            <span class="news-source"><i class="fa-regular fa-newspaper"></i> 보안뉴스 / 과기정통부</span>
+            <a href="https://www.boannews.com/media/view.asp?idx=133033" target="_blank" rel="noopener noreferrer" class="news-link">
+              기사 원문 <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 2 -->
+        <article class="news-card" data-category="ai">
+          <div class="news-top">
+            <span class="news-badge ai">AI 글로벌 규범</span>
+            <span class="news-date">2024.05</span>
+          </div>
+          <h3 class="news-title">
+            <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156632483" target="_blank" rel="noopener noreferrer">
+              ‘AI 서울정상회의’ 성공적 개최 및 ‘서울선언’ 채택
+            </a>
+          </h3>
+          <p class="news-summary">
+            안전하고 혁신적이며 포용적인 인공지능 발전을 위한 국제 연대 기준인 ‘서울선언’을 도출하며 한국이 글로벌 AI 규범 형성을 선도했습니다.
+          </p>
+          <div class="news-meta">
+            <span class="news-source"><i class="fa-regular fa-newspaper"></i> 대한민국 정책브리핑</span>
+            <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156632483" target="_blank" rel="noopener noreferrer" class="news-link">
+              기사 원문 <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 3 -->
+        <article class="news-card" data-category="rnd">
+          <div class="news-top">
+            <span class="news-badge rnd">과학기술 R&D</span>
+            <span class="news-date">2024.04</span>
+          </div>
+          <h3 class="news-title">
+            <a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4306692" target="_blank" rel="noopener noreferrer">
+              3대 게임체인저(AI·첨단바이오·양자) 기술에 국가 R&D 역량 결집
+            </a>
+          </h3>
+          <p class="news-summary">
+            과학기술·정보통신의 날을 맞아 대한민국의 새로운 도약을 위해 차세대 반도체 및 양자, 바이오 분야를 선도할 전략 프로젝트가 가동되었습니다.
+          </p>
+          <div class="news-meta">
+            <span class="news-source"><i class="fa-regular fa-newspaper"></i> 연합인포맥스</span>
+            <a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4306692" target="_blank" rel="noopener noreferrer" class="news-link">
+              기사 원문 <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 4 -->
+        <article class="news-card" data-category="public">
+          <div class="news-top">
+            <span class="news-badge public">민생·통신</span>
+            <span class="news-date">2025 정책방향</span>
+          </div>
+          <h3 class="news-title">
+            <a href="https://www.msit.go.kr/bbs/list.do?sCode=user&mId=113&mPid=112" target="_blank" rel="noopener noreferrer">
+              2025 과기정통부 핵심과제: "AI로 대전환, 과학기술로 미래선도"
+            </a>
+          </h3>
+          <p class="news-summary">
+            국민이 일상에서 기술 혁신을 체감할 수 있도록 데이터 안심 활용, 통신비 절감, 지역 특화 신산업 R&D 및 사이버 안전망을 대폭 강화합니다.
+          </p>
+          <div class="news-meta">
+            <span class="news-source"><i class="fa-regular fa-newspaper"></i> 과기정통부 공식 보도자료</span>
+            <a href="https://www.msit.go.kr/bbs/list.do?sCode=user&mId=113&mPid=112" target="_blank" rel="noopener noreferrer" class="news-link">
+              보도자료 보기 <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 5 -->
+        <article class="news-card" data-category="rnd">
+          <div class="news-top">
+            <span class="news-badge rnd">인재 양성</span>
+            <span class="news-date">2024.02</span>
+          </div>
+          <h3 class="news-title">
+            <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156614138" target="_blank" rel="noopener noreferrer">
+              이공계 대학원생 '대통령 과학장학금' 신설 및 젊은 연구자 지원
+            </a>
+          </h3>
+          <p class="news-summary">
+            청년 과학자들이 경제적 걱정 없이 창의적인 연구에 몰입할 수 있도록 연구생활장려금(한국형 스타이펜드) 및 장학 제도를 대폭 확충했습니다.
+          </p>
+          <div class="news-meta">
+            <span class="news-source"><i class="fa-regular fa-newspaper"></i> 대한민국 정책브리핑</span>
+            <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156614138" target="_blank" rel="noopener noreferrer" class="news-link">
+              기사 원문 <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 뉴스 카드 6 -->
+        <article class="news-card" data-category="public">
+          <div class="news-top">
+            <span class="news-badge public">국민안전</span>
+            <span class="news-date">상시 추진</span>
+          </div>
+          <h3 class="news-title">
+            <a href="https://www.msit.go.kr/bbs/list.do?sCode=user&mId=114&mPid=112" target="_blank" rel="noopener noreferrer">
+              과기정통부 팩트체크 및 설명자료: ‘사실은 이렇습니다’
+            </a>
+          </h3>
+          <p class="news-summary">
+            국민적 관심도가 높은 통신 품질, 디지털 정책, 과학기술 연구비 등 주요 언론 보도에 대한 정부의 공식 설명과 팩트를 투명하게 공개합니다.
+          </p>
+          <div class="news-meta">
+            <span class="news-source"><i class="fa-regular fa-newspaper"></i> 과기정통부 공식 브리핑</span>
+            <a href="https://www.msit.go.kr/bbs/list.do?sCode=user&mId=114&mPid=112" target="_blank" rel="noopener noreferrer" class="news-link">
+              설명자료 보기 <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- 공식 누리집 링크 배너 -->
+      <div class="portal-banner">
+        <div class="banner-text">
+          <h4>더 많은 정부 보도자료와 실시간 정책 소식이 궁금하신가요?</h4>
+          <p>과학기술정보통신부 공식 홈페이지에서 분야별 세부 정책과 입법 예고를 실시간으로 확인하실 수 있습니다.</p>
+        </div>
+        <div class="banner-buttons">
+          <a href="https://www.msit.go.kr" target="_blank" rel="noopener noreferrer" class="btn-banner primary">
+            공식 누리집 바로가기 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <a href="https://www.msit.go.kr/bbs/list.do?sCode=user&mId=113&mPid=112" target="_blank" rel="noopener noreferrer" class="btn-banner outline">
+            보도자료 아카이브 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 국민 소통 인터랙티브 퀴즈 섹션 -->
+  <section class="section bg-soft" id="quiz">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Interactive Quiz</span>
+        <h2 class="section-title">재미로 푸는 과기정통부 상식 퀴즈</h2>
+        <p class="section-desc">과기정통부의 역할과 정책에 대해 얼마나 알고 계신가요? 3문제를 맞춰보세요!</p>
+      </div>
+
+      <div class="quiz-card" id="quizBox">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress" id="quizProgress" style="width: 33.3%;"></div>
+        </div>
+        <div class="quiz-inner">
+          <div class="quiz-header-row">
+            <span class="quiz-step" id="quizStep">문제 1 / 3</span>
+            <span class="quiz-score" id="quizScoreText">점수: 0점</span>
+          </div>
+          <h3 class="quiz-question" id="quizQuestion">문제를 불러오는 중입니다...</h3>
+          <div class="quiz-options" id="quizOptions">
+            <!-- 자바스크립트로 옵션 렌더링 -->
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo-mark small">
+          <i class="fa-solid fa-atom"></i>
+        </div>
+        <div>
+          <div class="footer-title">대한민국 과학기술정보통신부</div>
+          <p class="footer-sub">Ministry of Science and ICT</p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>본 웹 애플리케이션은 과학기술정보통신부의 역할과 비전, 정책 뉴스를 국민들이 쉽게 이해할 수 있도록 제작된 독립형 소개 웹앱입니다.</p>
+        <p class="copyright">세종특별자치시 가름로 194(어진동) 정부세종청사 과학기술정보통신부 | 대표전화: 1335 (정부민원안내 콜센터)</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.msit.go.kr" target="_blank" rel="noopener noreferrer">공식 웹사이트</a>
+        <a href="https://www.facebook.com/withmsit" target="_blank" rel="noopener noreferrer">페이스북</a>
+        <a href="https://www.youtube.com/withmsit" target="_blank" rel="noopener noreferrer">유튜브</a>
+        <a href="https://blog.naver.com/with_msit" target="_blank" rel="noopener noreferrer">공식 블로그</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
